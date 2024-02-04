@@ -1,0 +1,36 @@
+@startuml
+Electrodomestic <|-- Rentadora
+Electrodomestic <|-- Televisio
+class Electrodomestic {
+   # preuBase: Float
+   # color: String
+   # consum: String
+   # pes: Int
+
+   # getPreuBase():Float
+   # setPreuBase(Float)
+
+   # getColor():STring
+   # setColor(String)
+
+   # getConsum():String
+   # getConsum(String)
+
+   # getPes():Int
+   # setPes(Int)
+
+   # preuFinal():Float
+   # constructor(Float, String, Int)
+   # override toString(): String
+}
+class Rentadora {
+    - carrega: Int
+    - getCarrega():Int
+    - setCarrega(Int)
+}
+class Televisio {
+    - tamany: Int
+    - getTamany():Int
+    - setTamany(Int)
+}
+@enduml

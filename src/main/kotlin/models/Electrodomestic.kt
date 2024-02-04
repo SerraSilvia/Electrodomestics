@@ -13,7 +13,32 @@ open class Electrodomestic {
         this.pes = kg
     }
 
-    open fun preuFinal(): Float {
+    protected fun getPreuBase():Float{
+        return this.preuBase
+    }
+    protected fun setPreuBase(preuBase:Float){
+        this.preuBase = preuBase
+    }
+    protected fun getColor():String{
+        return this.color
+    }
+    protected fun setColor(color:String){
+        this.color = color
+    }
+    protected fun getConsum():String{
+        return this.consum
+    }
+    protected fun setConsum(consum:String){
+        this.consum = consum
+    }
+    protected fun getPes():Int{
+        return this.pes
+    }
+    protected fun setPes(pes:Int){
+        this.pes = pes
+    }
+
+    protected fun preuFinal(): Float {
         var preuFinal = preuBase
 
         preuFinal += when (consum) {
@@ -36,30 +61,38 @@ open class Electrodomestic {
         return preuFinal
     }
 
-
-    private class Rentadora {
+    inner class Rentadora {
         private var carrega: Int = 5
-        private var preu: Float = 0.0f
-
-        fun getPreuFinal(): Float {
-            return 0.0f
+        constructor(carrega: Int) {
+            this.carrega = carrega
+        }
+        private fun getCarrega():Int{
+            return this.carrega
+        }
+        private fun setCarrega(carrega: Int){
+            this.carrega = carrega
         }
 
+
         override fun toString(): String {
-            return "El preu de la teva rentadora és: ${this.preu}"
+            return "El preu de la teva rentadora és: ${preuFinal()}"
         }
     }
 
-    private class Televisio {
+    inner class Televisio {
         private var tamany: Int = 28
-        private var preu: Float = 0.0f
 
-        fun getPreuFinal(): Float {
-            return 0.0f
+        constructor(tamany: Int) {
+            this.tamany = tamany
         }
-
+        private fun getTamany():Int{
+            return this.tamany
+        }
+        private fun setTamany(tamany: Int){
+            this.tamany = tamany
+        }
         override fun toString(): String {
-            return "El preu de la teva televisió és: ${this.preu}"
+            return "El preu de la teva televisió és: ${preuFinal()}"
         }
 
     }
