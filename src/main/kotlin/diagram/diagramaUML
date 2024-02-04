@@ -8,8 +8,11 @@ class Electrodomestic {
    # consum: String
    # pes: Int
 
-   # getNom():STring
+   # getNom():String
    # setNom(String)
+
+   # getMarca():STring
+   # setMarca(String)
 
    # getPreuBase():Float
    # setPreuBase(Float)

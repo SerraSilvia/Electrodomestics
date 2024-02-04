@@ -7,6 +7,7 @@ import utilities.RESET
 
 open class Electrodomestic {
     protected var nom:String=""
+    protected var marca:String=""
     protected var preuBase: Float = 0.0f
     protected var color:String = "blanc"
     protected var consum: String = "G"
@@ -17,17 +18,37 @@ open class Electrodomestic {
      * @author silvia Serra
      * @since 04/02/2024
      * @param nom : nom de l'electrodomèstic
+     * @param marca : marca de l'electrodomèstic
      * @param preuPase : Preu base de l'electrodomèstic
      * @param color: String on els colors disponibles són ("blanc", "platejat", "color")
      * @param consum: Consum de l'electrodomèstic dins del rang (A..G)
      * @param pes: Pes de l'electrodomèstic dins del rang (6..>80)
      */
-    constructor(nom:String, preu: Float, color:String, consum: String, kg: Int) {
+    constructor(nom:String, marca:String, preu: Float, color:String, consum: String, kg: Int) {
         this.nom = nom
+        this.marca = marca
         this.preuBase = preu
         this.color = color
         this.consum = consum
         this.pes = kg
+    }
+    /**
+     * Getter del nom de l'electrodomèstic
+     * @author Silvia Serra
+     * @since 04/02/2024
+     * @return nom com a String
+     */
+    protected fun getMarca():String {
+        return this.marca
+    }
+    /**
+     * Setter de la marca de l'electrodomèstic
+     * @author Silvia Serra
+     * @since 04/02/2024
+     * @return modifica la marca i la retorna en String
+     */
+    protected fun setMarca() {
+        this.marca = marca
     }
     /**
      * Getter del nom de l'electrodomèstic
@@ -155,7 +176,7 @@ open class Electrodomestic {
      * @return String amb la informació de la classe.
      */
     override fun toString(): String {
-        return "$BLUE_BOLD El teu electrodomèstic: ${this.nom} de preu base: ${this.preuBase} en color: ${this.color} i consum: ${this.consum}, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
+        return "$BLUE_BOLD El teu electrodomèstic: ${this.nom} de la marca: ${this.marca} amb preu base: ${this.preuBase} en color: ${this.color} i consum: ${this.consum}, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
     }
 
     inner class Rentadora {
@@ -215,7 +236,7 @@ open class Electrodomestic {
          * @return String amb la informació de la Rentadora
          */
         override fun toString(): String {
-            return "$BLUE_BOLD El teu electrodomèstic: Rentadora, de preu base: ${preuBase} en tamany: ${this.carrega}, en color: ${color} i consum: ${consum}, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
+            return "$BLUE_BOLD El teu electrodomèstic: Rentadora, de la marca: ${marca} amb preu base: ${preuBase} en tamany: ${this.carrega}, en color: ${color} i consum: ${consum}, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
         }
     }
 
@@ -276,7 +297,7 @@ open class Electrodomestic {
          * @return String amb la informació de la Televisio.
          */
         override fun toString(): String {
-            return "$BLUE_BOLD El teu electrodomèstic: televisió, de preu base: ${preuBase} i tamany: ${this.tamany} polzades, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
+            return "$BLUE_BOLD El teu electrodomèstic: televisió de la marca: ${marca} amb preu base: ${preuBase} i tamany: ${this.tamany} polzades, $RESET $CYAN_BOLD té un preu de: ${preuFinal()} $RESET"
         }
 
     }
