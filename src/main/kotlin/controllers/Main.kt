@@ -1,6 +1,8 @@
 package controllers
 
 import models.Electrodomestic
+import models.Rentadora
+import models.Televisio
 
 fun main() {
     var electrodomestics: MutableList<Electrodomestic> = mutableListOf()
@@ -13,16 +15,23 @@ fun main() {
     electrodomestics.add(Electrodomestic("congelador horitzontal", "Whirlpool",460.0f, "blanc", "F", 40))
     electrodomestics.add(Electrodomestic("frigorífica americà","Samsung" ,2551.0f, "negre", "E", 117))
     electrodomestics.add(Electrodomestic("rentadora-secadora", "LG",579.0f, "blanc", "D", 75))
+    electrodomestics.add(Televisio("LG OLED", "LG", 1200.0f, "negre", "G", 20, 50))
+
+    var rentadora1 = Rentadora("Balay 2", "Balay", 400.0f, "blanc", "G", 60, 8);
+
+
+    var tele = Televisio("LG OLED", "LG", 1200.0f, "negre", "G", 20 ,42  );
+    electrodomestics.add(rentadora1);
+    electrodomestics.add(tele);
 
 
     // Afegim 2 rentadoras
-    electrodomestics.add(Electrodomestic().Rentadora(carrega = 10))
-    electrodomestics.add(Electrodomestic().Rentadora(carrega = 8))
+    var rentadora2 = Rentadora("Balay 2", "Balay", 400.0f, "blanc", "G", 60, 5);
+    electrodomestics.add(rentadora2)
 
     // Afegim 2 televisions
-    electrodomestics.add(Electrodomestic().Televisio(tamany = 42))
-    electrodomestics.add(Electrodomestic().Televisio(tamany = 50))
 
+    /*
     // Mostrem atributs de cada electrodomèstic
     for ((index, electrodomestic) in electrodomestics.withIndex()) {
         println("Electrodomèstic ${index + 1}:")
@@ -63,4 +72,6 @@ fun main() {
     println("Televisions:")
     println("Preu base: ${preuBaseTotal - preuFinalTotal + preuFinalTelevisions}€")
     println("Preu final: $preuFinalTelevisions€")
+
+     */
 }
