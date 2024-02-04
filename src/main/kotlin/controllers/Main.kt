@@ -29,10 +29,10 @@ fun main() {
     for (electrodomestic in electrodomestics){
 
         println("Nom: ${electrodomestic.getNom()}:")
-        println("Preu base: ${electrodomestic.getPreuBase()}€")
+        /*println("Preu base: ${electrodomestic.getPreuBase()}€")
         println("Color: ${electrodomestic.getColor()}")
         println("Consum: ${electrodomestic.getConsum()}")
-        println("Pes: ${electrodomestic.getPes()}kg")
+        println("Pes: ${electrodomestic.getPes()}kg")*/
         println("Preu final: ${electrodomestic.preuFinal()}€")
         println()
 
@@ -40,7 +40,7 @@ fun main() {
         println()
     }
 
-    /*
+
 
     var preuBaseTotal = 0.0
     var preuFinalTotal = 0.0
@@ -51,7 +51,7 @@ fun main() {
         preuBaseTotal += electrodomestic.preuBase
         preuFinalTotal += electrodomestic.preuFinal()
 
-        if (electrodomestic is Electrodomestic.Rentadora) {
+        if (electrodomestic is Rentadora) {
             preuFinalRentadores += electrodomestic.preuFinal()
         } else if (electrodomestic is Televisio) {
             preuFinalTelevisions += electrodomestic.preuFinal()
@@ -71,7 +71,7 @@ fun main() {
     println("Televisions:")
     println("Preu base: ${preuBaseTotal - preuFinalTotal + preuFinalTelevisions}€")
     println("Preu final: $preuFinalTelevisions€")
-    */
+
 
 
 

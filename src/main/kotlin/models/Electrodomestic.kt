@@ -9,7 +9,7 @@ open class Electrodomestic {
 
     protected var nom:String=""
     protected var marca:String=""
-    protected var preuBase: Float = 0.0f
+    var preuBase: Float = 0.0f
     protected var color:String = "blanc"
     protected var consum: String = "G"
     protected var pes: Int = 0
