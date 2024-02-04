@@ -6,6 +6,7 @@ import utilities.RESET
 
 
 open class Electrodomestic {
+
     protected var nom:String=""
     protected var marca:String=""
     protected var preuBase: Float = 0.0f
@@ -38,7 +39,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return nom com a String
      */
-    protected fun getMarca():String {
+    public fun getMarca():String {
         return this.marca
     }
     /**
@@ -47,7 +48,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return modifica la marca i la retorna en String
      */
-    protected fun setMarca() {
+    public fun setMarca() {
         this.marca = marca
     }
     /**
@@ -56,7 +57,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return nom com a String
      */
-    protected fun getNom():String {
+    public fun getNom():String {
         return this.nom
     }
     /**
@@ -65,7 +66,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return modifica el nom retornat en String
      */
-    protected fun setNom() {
+    public fun setNom() {
         this.nom = nom
     }
     /**
@@ -74,7 +75,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Preu base com a Float
      */
-    protected fun getPreuBase():Float{
+    public fun getPreuBase():Float{
         return this.preuBase
     }
     /**
@@ -83,7 +84,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Preu base modificat com a Float
      */
-    protected fun setPreuBase(preuBase:Float){
+    public fun setPreuBase(preuBase:Float){
         this.preuBase = preuBase
     }
     /**
@@ -92,7 +93,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Retorna el color de l'electrodomèstic en String
      */
-    protected fun getColor():String{
+    public fun getColor():String{
         return this.color
     }
     /**
@@ -101,7 +102,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return canvia el color de l'electrodomèstic retornat en String
      */
-    protected fun setColor(color:String){
+    public fun setColor(color:String){
         this.color = color
     }
     /**
@@ -110,7 +111,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Retorna el consum de l'electrodomèstic com a String
      */
-    protected fun getConsum():String{
+    public fun getConsum():String{
         return this.consum
     }
     /**
@@ -119,7 +120,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Canvia el consum de l'electrodomèstic i el retorna en String
      */
-    protected fun setConsum(consum:String){
+    public fun setConsum(consum:String){
         this.consum = consum
     }
     /**
@@ -128,7 +129,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Retorna el pes de l'electrodomèstic com a Int
      */
-    protected fun getPes():Int{
+    public fun getPes():Int{
         return this.pes
     }
     /**
@@ -137,7 +138,7 @@ open class Electrodomestic {
      * @since 04/02/2024
      * @return Canvia el pes de l'electrodomèstic com a Int
      */
-    protected fun setPes(pes:Int){
+    public fun setPes(pes:Int){
         this.pes = pes
     }
 
@@ -148,7 +149,7 @@ open class Electrodomestic {
      * @param preuBase: Preu base del producte de la classe Electrodomestic on li haurem de sumar els suplements.
      * @return preuFinal: Preu final del producte calculat amb els suplements de consum i pes.
      */
-    protected open fun preuFinal(): Float {
+    public open fun preuFinal(): Float {
         var preuFinal = preuBase
 
         preuFinal += when (consum) {

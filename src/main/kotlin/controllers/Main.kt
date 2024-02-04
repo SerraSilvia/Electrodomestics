@@ -15,33 +15,32 @@ fun main() {
     electrodomestics.add(Electrodomestic("congelador horitzontal", "Whirlpool",460.0f, "blanc", "F", 40))
     electrodomestics.add(Electrodomestic("frigorífica americà","Samsung" ,2551.0f, "negre", "E", 117))
     electrodomestics.add(Electrodomestic("rentadora-secadora", "LG",579.0f, "blanc", "D", 75))
+    //Afegim 2 televisions
     electrodomestics.add(Televisio("LG OLED", "LG", 1200.0f, "negre", "G", 20, 50))
-
-    var rentadora1 = Rentadora("Balay 2", "Balay", 400.0f, "blanc", "G", 60, 8);
-
-
-    var tele = Televisio("LG OLED", "LG", 1200.0f, "negre", "G", 20 ,42  );
-    electrodomestics.add(rentadora1);
-    electrodomestics.add(tele);
+    electrodomestics.add(Televisio("Samsung QLED", "Samsung", 1100.0f, "platejat", "G", 20, 65))
+    //Afegim 2 rentadores
+    electrodomestics.add(Rentadora("Rentadora WW90CGC04DAEEC", "Samsung", 529.0f, "blanc", "A", 40, 9))
+    electrodomestics.add(Rentadora("Rentadora LFR6114O4B", "AEG", 551.0f, "blanc", "A", 40, 10))
 
 
-    // Afegim 2 rentadoras
-    var rentadora2 = Rentadora("Balay 2", "Balay", 400.0f, "blanc", "G", 60, 5);
-    electrodomestics.add(rentadora2)
 
-    // Afegim 2 televisions
-
-    /*
     // Mostrem atributs de cada electrodomèstic
-    for ((index, electrodomestic) in electrodomestics.withIndex()) {
-        println("Electrodomèstic ${index + 1}:")
-        println("Preu base: ${electrodomestic.preuBase}€")
-        println("Color: ${electrodomestic.color}")
-        println("Consum: ${electrodomestic.consum}")
-        println("Pes: ${electrodomestic.pes}kg")
+
+    for (electrodomestic in electrodomestics){
+
+        println("Nom: ${electrodomestic.getNom()}:")
+        println("Preu base: ${electrodomestic.getPreuBase()}€")
+        println("Color: ${electrodomestic.getColor()}")
+        println("Consum: ${electrodomestic.getConsum()}")
+        println("Pes: ${electrodomestic.getPes()}kg")
         println("Preu final: ${electrodomestic.preuFinal()}€")
         println()
+
+        //println(electrodomestic)
+        println()
     }
+
+    /*
 
     var preuBaseTotal = 0.0
     var preuFinalTotal = 0.0
@@ -72,6 +71,8 @@ fun main() {
     println("Televisions:")
     println("Preu base: ${preuBaseTotal - preuFinalTotal + preuFinalTelevisions}€")
     println("Preu final: $preuFinalTelevisions€")
+    */
 
-     */
+
+
 }
